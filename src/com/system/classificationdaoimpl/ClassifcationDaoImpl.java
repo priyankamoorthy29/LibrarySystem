@@ -66,30 +66,30 @@ public class ClassifcationDaoImpl  implements ClassifcationDao{
 
 	@Override
 	public List<Classification> getAllClassificationDetails() {
-	Connection connection=null;
-	PreparedStatement ps=null;
-	
-	List<Classification> classificationList=  new ArrayList<Classification>();
-	
-	try{
-		connection=dataSource.getConnection();
-		String SQL="SELECT id, classificationname FROM mainclassification";
-		ps=connection.prepareStatement(SQL);
-		ResultSet rs=ps.executeQuery();
-		
-		while(rs.next()) {
-			Classification classification= new Classification();
-			classification.setId(rs.getInt("id"));
-			classification.setClassificationname(rs.getString("classificationname"));
-			classificationList.add(classification);
-				
-		}	
-		
-	}catch(Exception e) {
-		e.printStackTrace();
-	}
-		
-	return  classificationList;
+//	Connection connection=null;
+//	PreparedStatement ps=null;
+//	
+//	List<Classification> classificationList=  new ArrayList<Classification>();
+//	
+//	try{
+//		connection=dataSource.getConnection();
+//		String SQL="SELECT id, classificationname FROM mainclassification";
+//		ps=connection.prepareStatement(SQL);
+//		ResultSet rs=ps.executeQuery();
+//		
+//		while(rs.next()) {
+//			Classification classification= new Classification();
+//			classification.setId(rs.getInt("id"));
+//			classification.setClassificationname(rs.getString("classificationname"));
+//			classificationList.add(classification);
+//				
+//		}	
+//		
+//	}catch(Exception e) {
+//		e.printStackTrace();
+//	}
+//		
+	return  null;
 	}
 
 	@Override

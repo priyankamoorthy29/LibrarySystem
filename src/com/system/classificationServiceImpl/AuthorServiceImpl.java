@@ -47,7 +47,7 @@ public class AuthorServiceImpl   implements AuthorService{
 	@Override
 	public List<Author> FetchAuthorList() {
 	
-		return authorDAO.getAllAuthorDetails();
+		return authorDAO.getAuthorList();
 		}
 	
 	

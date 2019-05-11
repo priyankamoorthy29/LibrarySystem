@@ -84,24 +84,13 @@ public class AuthorDaoImpl implements AuthorDao {
 	}
 
 
-
-
-	@Override
-	public List<Author> getAllAuthorDetails() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-
-
 	@Override
 	public List<Author> getAuthorList() {
 	
 		Connection connection=null;
 		PreparedStatement ps=null;
 		
-		List<Classification> classificationList=  new ArrayList<Classification>();
+		List<Author> authorList=  new ArrayList<Author>();
 		
 		try{
 			connection=dataSource.getConnection();
@@ -113,7 +102,7 @@ public class AuthorDaoImpl implements AuthorDao {
 				Author author= new Author();
 				author.setId(rs.getInt("id"));
 				author.setAuthorname(rs.getString("authorname"));
-				AuthorList.add(author);
+				authorList.add(author);
 					
 			}	
 			
@@ -121,11 +110,11 @@ public class AuthorDaoImpl implements AuthorDao {
 			e.printStackTrace();
 		}
 			
-		return  AuthorList;
+		return authorList;
 		}
 
 		
 	}
 
 
-}
+

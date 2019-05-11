@@ -30,16 +30,22 @@ AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("Beans.xml")
 AuthorService authorService=ctx.getBean("authorService", AuthorServiceImpl.class);
 
 Author author= new Author();
-author.setId(3);
+author.setId(5);
 author.setAuthorname("math");
 authorService.addAuthor(author);
 
 	
-//	
+	
 //for(Classification classification1:classificationService.FetchClassificationList()) {
 //		System.out.println(classification1.getId()+""+classification1.getClassificationname());
 //	}
 //	
+//}
+
+for(Author author1:authorService.FetchAuthorList()) {
+	System.out.println(author1.getId()+""+author1.getAuthorname());
+}
+
 }
 
 }
