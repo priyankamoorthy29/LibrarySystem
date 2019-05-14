@@ -2,12 +2,13 @@ package com.system.classifcationmodel;
 
 public class Classification {
 	
-	private int id;
+	private String id;
 	private String classificationname;
-	public int getId() {
+
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getClassificationname() {
@@ -16,7 +17,7 @@ public class Classification {
 	public void setClassificationname(String classificationname) {
 		this.classificationname = classificationname;
 	}
-	
+
 	
 	
 	

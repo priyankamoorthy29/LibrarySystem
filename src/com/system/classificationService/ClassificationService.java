@@ -8,9 +8,11 @@ public interface ClassificationService  {
 	
 	
 	public abstract Classification addClassification(Classification classification);
-	public abstract Classification fetchClassifcationById(Integer classificationId);
-	public abstract Classification deleteClassificationById(Integer classificationId);
-	public abstract Classification updateClassifcationById(Integer classificationId,Classification classification);
-	public abstract List<Classification> FetchClassificationList();
+	public abstract Classification fetchClassifcationById(String classificationId);
+	public abstract Classification deleteClassificationById(String deleteId);
+	public abstract Classification updateClassifcationById(String classificationId,Classification classification);
+	public abstract List<Classification> fetchClassificationList();
+
+	
 
 }
